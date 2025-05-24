@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Your Service | LocalPro Finder</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="assets/images/logo.svg" alt="LocalPro Finder" width="40">
+                <h1>LocalPro Finder</h1>
+            </div>
+        </div>
+    </header>
+    <main class="container">
+        <section class="submit-form">
+            <h2>Add Your Service</h2>
+            <form id="serviceForm" action="https://script.google.com/macros/s/your-apps-script-id/exec" method="POST">
+                <div class="form-group">
+                    <label for="name">Business Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="category">Category</label>
+                    <select id="category" name="category" required>
+                        <option value="">Select Category</option>
+                        <option value="Plumbing">Plumbing</option>
+                        <option value="Electrical">Electrical</option>
+                        <option value="Cleaning">Cleaning</option>
+                        <option value="Landscaping">Landscaping</option>
+                        <option value="Tutoring">Tutoring</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="location">Location</label>
+                    <input type="text" id="location" name="location" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea id="description" name="description" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="hours">Business Hours</label>
+                    <input type="text" id="hours" name="hours">
+                </div>
+                <div class="form-group">
+                    <label for="services">Services (comma-separated)</label>
+                    <input type="text" id="services" name="services">
+                </div>
+                <button type="submit" class="btn-primary">
+                    <i class="fas fa-plus-circle"></i> Submit Service
+                </button>
+            </form>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p>© <span id="currentYear"></span> LocalPro Finder. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        document.getElementById('serviceForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            fetch(this.action, {
+                method: 'POST',
+                body: new FormData(this)
+            }).then(response => {
+                if (response.ok) {
+                    alert('Service submitted successfully!');
+                    this.reset();
+                } else {
+                    alert('Error submitting service. Please try again.');
+                }
+            }).catch(error => {
+                console.error('Submission error:', error);
+                alert('Error submitting service. Please try again.');
+            });
+        });
+    </script>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Find and connect with local professionals in your area">
+    
+    <!-- PWA Configuration -->
+    <meta name="theme-color" content="#4CAF50">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="favicon.ico">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css" media="(prefers-color-scheme: dark)">
+    
+    <title>LocalPro Finder | Connect with Local Professionals</title>
+</head>
+<body>
+    <!-- Skip Navigation -->
+    <a href="#main-content" class="skip-link">Skip to content</a>
+    
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="assets/images/logo.svg" alt="LocalPro Finder" width="40">
+                <h1>LocalPro Finder</h1>
+            </div>
+            <nav>
+                <button id="themeToggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2>Find Trusted Professionals Near You</h2>
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Try 'electrician' or '90210'..." aria-label="Search services">
+                    <button id="searchBtn">
+                        <i class="fas fa-search"></i>
+                        <span class="sr-only">Search</span>
+                    </button>
+                </div>
+                <div class="filter-options">
+                    <select id="categoryFilter">
+                        <option value="">All Categories</option>
+                        <option value="Plumbing">Plumbing</option>
+                        <option value="Electrical">Electrical</option>
+                        <option value="Cleaning">Cleaning</option>
+                        <option value="Landscaping">Landscaping</option>
+                        <option value="Tutoring">Tutoring</option>
+                    </select>
+                    <button id="locationFilter" class="icon-btn">
+                        <i class="fas fa-location-arrow"></i>
+                        <span>Near Me</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Main Content -->
+    <main id="main-content" class="container">
+        <section class="results-section">
+            <div class="results-header">
+                <h3>Available Services</h3>
+                <div class="sort-options">
+                    <label for="sortBy">Sort by:</label>
+                    <select id="sortBy">
+                        <option value="default">Default</option>
+                        <option value="distance">Distance</option>
+                        <option value="name">Name (A-Z)</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div id="loadingIndicator" class="loading">
+                <div class="spinner"></div>
+                <p>Loading services...</p>
+            </div>
+            
+            <div id="listingsGrid" class="listings-grid"></div>
+            
+            <div id="noResults" class="no-results hidden">
+                <img src="assets/images/placeholder.jpg" alt="No results found" width="200">
+                <h4>No services found</h4>
+                <p>Try adjusting your search criteria or <a href="https://forms.gle/nEoFLst6E7vDonD37" target="_blank">add your service</a></p>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="https://forms.gle/nEoFLst6E7vDonD37" target="_blank" class="btn-primary">
+                    <i class="fas fa-plus-circle"></i> Add Your Service
+                </a>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-info">
+                <p>© <span id="currentYear"></span> LocalPro Finder. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Toast Notification -->
+    <div id="toast" class="toast hidden"></div>
+    
+    <!-- Scripts -->
+    <script src="assets/js/app.js" defer></script>
+</body>
+</html>

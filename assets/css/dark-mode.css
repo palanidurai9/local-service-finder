@@ -1,0 +1,41 @@
+[data-theme="dark"] {
+    --primary: #4CAF50;
+    --primary-dark: #388E3C;
+    --primary-light: #1B5E20;
+    --dark: #f5f5f5;
+    --light: #121212;
+    --gray: #9E9E9E;
+    --light-gray: #424242;
+    --white: #212121;
+    --black: #ffffff;
+}
+
+[data-theme="dark"] body {
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+[data-theme="dark"] .header {
+    background-color: var(--white);
+}
+
+[data-theme="dark"] .service-card {
+    background-color: var(--white);
+}
+
+[data-theme="dark"] .search-box input {
+    background-color: var(--light-gray);
+    color: var(--dark);
+}
+
+[data-theme="dark"] .search-box button {
+    background-color: var(--primary);
+}
+
+[data-theme="dark"] .search-box button:hover {
+    background-color: var(--primary-dark);
+}
+
+[data-theme="dark"] .submit-form {
+    background-color: var(--white);
+}

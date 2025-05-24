@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "John's Plumbing",
+        "category": "Plumbing",
+        "location": "Brooklyn, NY",
+        "phone": "+1 (555) 123-4567",
+        "description": "24/7 emergency plumbing services.",
+        "lat": 40.6782,
+        "lng": -73.9442,
+        "verified": true,
+        "isNew": false,
+        "hours": "Mon-Sun: 24/7",
+        "services": ["Pipe Repair", "Drain Cleaning", "Water Heater Installation"]
+    },
+    {
+        "id": 2,
+        "name": "Bright Tutors",
+        "category": "Tutoring",
+        "location": "Queens, NY",
+        "phone": "+1 (555) 987-6543",
+        "description": "Math and science tutoring for all grades.",
+        "lat": 40.7549,
+        "lng": -73.9840,
+        "verified": false,
+        "isNew": true,
+        "hours": "Mon-Fri: 9AM-6PM",
+        "services": ["Math Tutoring", "Science Tutoring", "Test Prep"]
+    },
+    {
+        "id": 3,
+        "name": "Spark Electric",
+        "category": "Electrical",
+        "location": "Manhattan, NY",
+        "phone": "+1 (555) 456-7890",
+        "description": "Residential and commercial electrical services.",
+        "lat": 40.7831,
+        "lng": -73.9712,
+        "verified": true,
+        "isNew": false,
+        "hours": "Mon-Sat: 8AM-5PM",
+        "services": ["Wiring", "Lighting Installation", "Electrical Repairs"]
+    }
+]

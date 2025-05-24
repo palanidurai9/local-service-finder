@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found | LocalPro Finder</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="assets/images/logo.svg" alt="LocalPro Finder" width="40">
+                <h1>LocalPro Finder</h1>
+            </div>
+        </div>
+    </header>
+    <main class="container">
+        <section class="no-results">
+            <h2>404 - Page Not Found</h2>
+            <p>Sorry, the page you're looking for doesn't exist.</p>
+            <a href="index.html" class="btn-primary">Return to Home</a>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p>© <span id="currentYear"></span> LocalPro Finder. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
