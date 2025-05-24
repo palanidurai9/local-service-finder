@@ -42,7 +42,7 @@ Project Structure
 Setup Instructions
 
 Clone the Repository:
-git clone https://github.com/yourusername/local-service-finder.git
+git clone https://github.com/palanidurai9/local-service-finder.git
 cd local-service-finder
 
 
@@ -68,7 +68,7 @@ Deploy to GitHub Pages:
 
 Push the repository to GitHub.
 Go to Settings > Pages, select the main branch, and set the root folder to /.
-Access the site at https://yourusername.github.io/local-service-finder.
+Access the site at https://palanidurai9.github.io/local-service-finder.
 
 
 Alternative Deployment (Netlify):
